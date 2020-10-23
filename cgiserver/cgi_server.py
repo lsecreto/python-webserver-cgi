@@ -56,4 +56,4 @@ class CGIHTTPServer(ThreadingMixIn, HTTPServer):
 
 class CGIServerRequestHandler(CGIHTTPRequestHandler):
     def log_message(self, log_format, *args):
-        CGIServer.log('[%s]\t%s\n' % (current_process().name, log_format % args))
+        CGIServer.log(log_format % args)
